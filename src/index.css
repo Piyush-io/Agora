@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+@font-face {
+  font-family: 'pinkendregular';
+  src: url('fonts/pinkend-webfont.woff2') format('woff2'),
+       url('fonts/pinkend-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@layer base {
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
