@@ -1,5 +1,3 @@
-import React from "react";
-
 const NotebookScribble = ({ children, color, className = "" }) => (
   <div
     className={`absolute pointer-events-none ${className}`}
@@ -37,6 +35,20 @@ export default function DevicePreview() {
 
       <NotebookScribble color="#000000" className="top-[40%] left-40 text-xl">
         {"Schrödinger Equation\n" + "iℏ ∂Ψ/∂t = HΨ"}
+      </NotebookScribble>
+      
+      <NotebookScribble
+        color="#FF9671"
+        className="top-[40%] right-[15%] text-xl"
+      >
+        {"∫ f(x) dx\nIntegration"}
+      </NotebookScribble>
+
+      <NotebookScribble
+        color="#4EA8DE"
+        className="bottom-[20%] left-[20%] text-xl"
+      >
+        {"ΔG = ΔH - TΔS\nGibbs Free Energy"}
       </NotebookScribble>
 
       <NotebookScribble
@@ -133,6 +145,7 @@ export default function DevicePreview() {
         <div className="relative rounded-[2.5rem] bg-black p-2">
           {/* Screen content */}
           <div className="relative rounded-[2.25rem] overflow-hidden w-full h-[600px]">
+            {/* Screen Image */}
             <img
               src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=1200"
               alt="iPad notes app showing study notes"
@@ -158,21 +171,6 @@ export default function DevicePreview() {
       </div>
         </div>
       </div>
-
-      {/* Study-related Symbols */}
-      <NotebookScribble
-        color="#FF9671"
-        className="top-[40%] right-[15%] text-xl"
-      >
-        {"∫ f(x) dx\nIntegration"}
-      </NotebookScribble>
-
-      <NotebookScribble
-        color="#4EA8DE"
-        className="bottom-[20%] left-[20%] text-xl"
-      >
-        {"ΔG = ΔH - TΔS\nGibbs Free Energy"}
-      </NotebookScribble>
     </section>
   );
 }

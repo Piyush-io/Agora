@@ -1,6 +1,3 @@
-import React from 'react';
-import { ChevronRight } from 'lucide-react';
-
 export default function CTA() {
   return (
     <section className="py-5 px-6">
